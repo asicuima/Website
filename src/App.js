@@ -5,9 +5,9 @@ import { HelmetProvider, Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
 import About from './pages/About';
 import CV from './pages/CV';
-import Blog from './pages/Blog';
-import BlogPost from "./pages/BlogPost";
-import cv from "./assets/Zara Siddique CV.pdf";
+import Elsewhere from './pages/Elsewhere';
+import cv from "./assets/cv.pdf";
+import profileImage from "./assets/profile.jpg";
 
 function App() {
   const location = useLocation();
@@ -23,34 +23,32 @@ function App() {
     <div className="App">
       <HelmetProvider>
         <Helmet>
-
+          <title>asicuima</title>
           <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://zarasiddique.com/" />
-          <meta property="og:title" content="Zara Siddique" />
-          <meta property="og:description" content="A website all about Zara Siddique." />
-          <meta property="og:image"
-            content="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdXB3azYxNzAyNDQ2LXdpa2ltZWRpYS1pbWFnZS1rb3dia3MxZS5qcGc.jpg" />
+          <meta property="og:url" content="https://asicuima.com/" />
+          <meta property="og:title" content="asicuima" />
+          <meta property="og:description" content="A website all about Liangliang Ma." />
+          <meta property="og:image" content={profileImage} />
 
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:url" content="https://zarasiddique.com/" />
-          <meta name="twitter:title" content="Zara Siddique" />
-          <meta name="twitter:description" content="A website all about Zara Siddique." />
-          <meta name="twitter:image"
-            content="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdXB3azYxNzAyNDQ2LXdpa2ltZWRpYS1pbWFnZS1rb3dia3MxZS5qcGc.jpg" />
+          <meta name="twitter:url" content="https://asicuima.com/" />
+          <meta name="twitter:title" content="asicuima" />
+          <meta name="twitter:description" content="A website all about Liangliang Ma." />
+          <meta name="twitter:image" content={profileImage} />
 
-          <meta name="title" content="Zara Siddique" />
-          <meta name="description" content="A website all about Zara Siddique." />
-          <meta name="author" content="Zara Siddique" />
+          <meta name="title" content="asicuima" />
+          <meta name="description" content="A website all about Liangliang Ma." />
+          <meta name="author" content="Liangliang Ma" />
         </Helmet>
         <Container className="pt-5">
           <Navbar expand="lg">
-            <Navbar.Brand href="/">Zara Siddique</Navbar.Brand>
+            <Navbar.Brand href="/">Liangliang Ma</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-              <Nav>
+              <Nav className="ms-auto">
                 <Nav.Link href="/">About</Nav.Link>
                 <Nav.Link href={cv} target="_blank" rel="noreferrer">CV</Nav.Link>
-                <Nav.Link href="/blog">Blog</Nav.Link>
+                <Nav.Link href="/elsewhere">Elsewhere</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
@@ -59,8 +57,7 @@ function App() {
           <Routes>
             <Route path="/" element={<About />} />
             <Route path="/cv" element={<CV />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/:id" element={<BlogPost />} />
+            <Route path="/elsewhere" element={<Elsewhere />} />
           </Routes>
         </Container>
       </HelmetProvider>
