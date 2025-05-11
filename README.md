@@ -13,16 +13,36 @@ A modern React-based personal website built with React 18, Bootstrap, and React 
 
 ## Prerequisites
 
+- Docker (for containerized deployment)
+- Git (for version control)
+
+Optional (if you want to run without Docker):
 - Node.js (v18 or higher)
 - npm (v8 or higher)
-- Docker (for containerized deployment)
 
 ## Getting Started
 
+### Using Docker (Recommended)
+
 1. Clone the repository:
 ```bash
-git clone [your-repository-url]
-cd asicuima
+git clone https://github.com/asicuima/Website.git
+cd Website
+```
+
+2. Build and run using Docker Compose:
+```bash
+docker-compose up --build
+```
+
+The website will be available at http://localhost:3000.
+
+### Without Docker (Alternative)
+
+1. Clone the repository:
+```bash
+git clone https://github.com/asicuima/Website.git
+cd Website
 ```
 
 2. Install dependencies:
@@ -81,6 +101,7 @@ npm run build
 ├── docker-compose.yml # Docker Compose configuration
 └── nginx.conf      # Nginx configuration
 ```
+
 ## Technologies Used
 
 - React 18
