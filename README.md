@@ -1,6 +1,19 @@
-# asicuima - Personal Website
+# Personal Website
 
-A modern React-based personal website built with React 18, Bootstrap, and React Router.
+This is my personal website built with React and Bootstrap.
+
+## Quick Start with Docker
+
+```bash
+# Clone the repository
+git clone https://github.com/asicuima/myspace.git
+
+# Navigate to the project directory
+cd myspace
+
+# Start the development server
+docker-compose up
+```
 
 ## Features
 
@@ -20,41 +33,23 @@ Optional (if you want to run without Docker):
 - Node.js (v18 or higher)
 - npm (v8 or higher)
 
-## Getting Started
+## Manual Installation
 
-### Using Docker (Recommended)
+If you prefer to run the project without Docker, follow these steps:
 
-1. Clone the repository:
 ```bash
-git clone https://github.com/asicuima/Website.git
-cd Website
-```
+# Clone the repository
+git clone https://github.com/asicuima/myspace.git
 
-2. Build and run using Docker Compose:
-```bash
-docker-compose up --build
-```
+# Navigate to the project directory
+cd myspace
 
-The website will be available at http://localhost:3000.
-
-### Without Docker (Alternative)
-
-1. Clone the repository:
-```bash
-git clone https://github.com/asicuima/Website.git
-cd Website
-```
-
-2. Install dependencies:
-```bash
+# Install dependencies
 npm install
-```
 
-3. Start the development server:
-```bash
+# Start the development server
 npm start
 ```
-The development server will run on http://localhost:3000.
 
 ## Available Scripts
 
