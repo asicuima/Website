@@ -26,13 +26,13 @@ function App() {
           <Helmet>
             <title>asicuima</title>
             <meta property="og:type" content="website" />
-            <meta property="og:url" content="https://asicuima.github.io/myspace/" />
+            <meta property="og:url" content="https://www.asicuima.com/" />
             <meta property="og:title" content="asicuima" />
             <meta property="og:description" content="A website all about Liangliang Ma." />
             <meta property="og:image" content={profileImage} />
 
             <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:url" content="https://asicuima.github.io/myspace/" />
+            <meta name="twitter:url" content="https://www.asicuima.com/" />
             <meta name="twitter:title" content="asicuima" />
             <meta name="twitter:description" content="A website all about Liangliang Ma." />
             <meta name="twitter:image" content={profileImage} />
