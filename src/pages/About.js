@@ -37,7 +37,8 @@ function About() {
         <Col md={1}></Col>
 
         {/* Main content column */}
-        <Col md={6}>
+        <Col md={6} style={{ marginTop: '2rem' }}>
+          
           <p>
             My expertise spans data engineering, analytics, and language technologies, with a focus on creating solutions that are both effective and thoughtful. I approach both technology and life with a spirit of exploration and lifelong learning.
           </p>

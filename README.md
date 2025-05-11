@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+# asicuima - Personal Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern React-based personal website built with React 18, Bootstrap, and React Router.
+
+## Features
+
+- Modern React 18 with latest features
+- Responsive design using Bootstrap 5
+- Client-side routing with React Router
+- SEO optimization with React Helmet
+- Icon support with React Icons
+- Security features with DOMPurify
+
+## Prerequisites
+
+- Node.js (v18 or higher)
+- npm (v8 or higher)
+- Docker (for containerized deployment)
+
+## Getting Started
+
+1. Clone the repository:
+```bash
+git clone [your-repository-url]
+cd asicuima
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the development server:
+```bash
+npm start
+```
+The development server will run on http://localhost:3000.
 
 ## Available Scripts
 
-In the project directory, you can run:
+- `npm start` - Runs the app in development mode
+- `npm test` - Launches the test runner
+- `npm run build` - Builds the app for production
+- `npm run eject` - Ejects from Create React App (one-way operation)
 
-### `npm start`
+## Deployment
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Docker Deployment
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Build and run using Docker Compose:
+```bash
+docker-compose up --build
+```
 
-### `npm test`
+The containerized application will be available at http://localhost:3000.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Static Deployment
 
-### `npm run build`
+1. Build the production version:
+```bash
+npm run build
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. The `build` folder contains the production-ready static files that can be deployed to:
+   - Netlify: Connect your repository and set the build command to `npm run build`
+   - Vercel: Connect your repository and set the build command to `npm run build`
+   - GitHub Pages: Use `gh-pages` package and set the build command
+   - AWS S3 + CloudFront: Upload the contents of the `build` folder to your S3 bucket
+   - Any static hosting service: Upload the contents of the `build` folder
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Project Structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+├── public/          # Static files
+├── src/            # Source code
+│   ├── components/ # React components
+│   ├── pages/      # Page components
+│   ├── assets/     # Images and other assets
+│   └── App.js      # Main application component
+├── Dockerfile      # Docker configuration
+├── docker-compose.yml # Docker Compose configuration
+└── nginx.conf      # Nginx configuration
+```
+## Technologies Used
 
-### `npm run eject`
+- React 18
+- React Router 6
+- Bootstrap 5
+- React Bootstrap
+- React Helmet Async
+- React Icons
+- DOMPurify
+- Docker
+- Nginx
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Credits
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This project is based on the original code from [Zara Siddique's personal website](https://github.com/zarasiddique). Special thanks for the inspiration and foundation of this project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
